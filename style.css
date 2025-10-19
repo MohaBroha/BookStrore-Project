@@ -1,109 +1,274 @@
-/* Header: volle Breite + Box Shadow */
 .header {
-    width: 100%;
-    /* Header füllt gesamte Breite */
-    height: 80px;
+    width: auto;
+    height: 60px;
     display: flex;
     align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     background-color: #052f56;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 0 10px;
+
 }
 
-/* Container: Content-Begrenzung */
 .container {
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
-    /* Zentriert auf großen Bildschirmen */
-    padding: 0 20px;
-    /* Abstand links/rechts */
     display: flex;
     justify-content: space-between;
-    /* Logo links, Text rechts */
     align-items: center;
+    flex-wrap: wrap;
 }
 
-/* Logo als Hintergrundbild */
 .logo {
-
     width: 60px;
     height: 60px;
     background-image: url('img/11905970_4851717.jpg');
     background-size: contain;
-    background-repeat: no-repeat;
     background-position: center;
+    background-repeat: no-repeat;
 }
 
-/* Text rechts */
 .logo-text {
     font-size: 1.5rem;
     font-weight: bold;
     color: beige;
 }
 
+.myMain {
+    background-color: beige;
+}
+
 .footer {
-    width: 100%;
+    width: auto;
+    height: 60px;
     background-color: #052f56;
     display: flex;
     justify-content: center;
-    /* horizontal zentriert */
     align-items: center;
-    /* vertikal zentriert */
-    height: 60px;
-}
-
-/* Container im Footer für Content-Begrenzung */
-.footer .container {
-    max-width: 1200px;
-    width: 100%;
-    padding: 0 20px;
-    display: flex;
-    justify-content: center;
+    padding: 0 10px;
     text-align: center;
 }
 
-/* Footer Text */
 .footer-text {
     font-size: 0.9rem;
     color: beige;
-    /* nur Textfarbe */
 }
 
-/* Responsive Anpassungen */
-@media (max-width: 768px) {
-    .header {
-        height: 60px;
+
+.intro.container {
+
+    width: auto;
+    padding: 28px 20px;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+
+.gallery-wrap {
+    width: 100%;
+    background: #350758;
+    padding: 30px 0 60px;
+}
+
+.gallery {
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.book-card {
+
+    background: beige;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    border: #1a6;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
+}
+
+.book-card:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.book-thumb {
+
+    width: 100%;
+    padding-top: 150%;
+    background-size: auto;
+    background-position: center;
+
+}
+
+.book-meta {
+
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.book-title {
+
+    font-weight: 500;
+    font-size: 1.98rem;
+}
+
+.book-author {
+    color: #667;
+    font-size: 0.9rem;
+}
+
+.book-price {
+    margin-top: 6px;
+    font-weight: 700;
+    color: navy;
+}
+
+#modalPrice {
+    margin-top: 6px;
+    font-weight: 700;
+    color: navy;
+
+}
+
+#like-container {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+
+
+.heart.liked {
+    color: red;
+    transform: scale(1.2);
+    transition: transform 0.2s;
+}
+
+
+.viewer-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.viewer {
+    width: 90%;
+    max-width: 900px;
+    background: beige;
+    border-radius: 10px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 18px;
+    padding: 18px;
+}
+
+.viewer .cover {
+    background-size: cover;
+    background-position: center;
+    min-height: 420px;
+    border-radius: 8px;
+}
+
+.viewer .meta {
+    padding: 6px 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.viewer h3 {
+    margin: 0;
+}
+
+.viewer .small {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.viewer .comments {
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px dashed navy;
+    overflow: auto;
+}
+
+
+.btn {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 0;
+    cursor: pointer;
+    font-weight: 600;
+    background: #052f56;
+    color: white;
+    margin-top: 6px;
+}
+
+
+@media (max-width:1000px) {
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width:640px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .logo {
-        width: 40px;
-        height: 40px;
+    .header {
+        height: auto;
+        flex-direction: column;
+        padding: 10px 20px;
     }
 
     .logo-text {
+        margin-top: 6px;
         font-size: 1.2rem;
     }
 
-    .footer .container {
-        padding: 0 15px;
+    .viewer {
+        grid-template-columns: 1fr;
+        padding: 12px;
     }
+
+    .viewer .cover {
+        min-height: 300px;
+    }
+
 }
 
-@media (max-width: 480px) {
-    .header {
-        height: 50px;
+@media (max-width:420px) {
+    .gallery {
+        grid-template-columns: 1fr;
     }
 
-    .logo {
-        width: 30px;
-        height: 30px;
+    .intro.container {
+        text-align: center;
     }
 
-    .logo-text {
-        font-size: 1rem;
+    .footer {
+        height: auto;
+        padding: 10px;
     }
 
-    .footer .container {
-        padding: 0 10px;
+    .footer-text {
+        font-size: 0.8rem;
     }
 }

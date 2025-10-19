@@ -4,37 +4,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bookstore - Galerie</title>
+    <link rel="shortcut icon" href="img/books.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <script src="./script.js"></script>
+    <script src="script.js" defer></script>
+
 </head>
 
 <body>
 
     <header class="header">
         <div class="container">
-            <div class="logo"></div>
+            <div class="logo" aria-hidden="true"></div>
             <div class="logo-text">Bookstore</div>
         </div>
     </header>
 
-    <h1>Bookstore</h1>
-    <h1> Welcome to the Bookstore</h1>
-    <h2>A place where stories come alive.</h2>
-    <p>Browse through our virtual shelves, discover new titles, share your thoughts, and bring your favorites
-        home.</p>
+    <main class="myMain">
+        <section class="intro container">
+            <h1>Welcome to the Bookstore</h1>
+            <h2>A place where stories come alive.</h2>
+            <p>Browse through our virtual shelves, discover new titles, share your thoughts, and bring your favorites
+                home.</p>
+        </section>
 
+        <section class="gallery-wrap">
+            <div id="gallery" class="gallery container"></div>
+        </section>
+    </main>
 
+    <div id="modalBackdrop" class="viewer-overlay" style="display:none;" onclick="closeModal(event)">
+        <div class="viewer">
+            <div class="cover" id="modalCover"></div>
+            <div class="meta">
+                <h3 id="modalTitle"></h3>
+                <div id="modalAuthor" class="small"></div>
+                <div id="modalPrice"></div>
+                <div id="like-container">
+                    <span id="like-heart">🖤</span>
+                    <span id="like-count">1253</span>
+                </div>
+                <div id="modalGenre"></div>
+                <div id="modalDate" class="small"></div>
+                <div class="comments" id="comments"></div>
+                <input type="text" id="newComment" placeholder="Add comment">
+                <button onclick="addComment()" class="btn">Add Comment</button>
 
-
-
+            </div>
+        </div>
+    </div>
 
     <footer class="footer">
-        <div class="container">
-            <div class="footer-text">© 2025 Bookstore. All rights reserved.</div>
 
-        </div>
+        <div class="footer-text">© 2025 Bookstore. All rights reserved.</div>
+
     </footer>
+
 </body>
 
 </html>
