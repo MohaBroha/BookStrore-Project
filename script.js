@@ -11,12 +11,12 @@ let img = {
     9: "img/book9.jpg",
     10: "img/book10.jpg"
 };
-let COMMENT_NAMES = ["Anna", "Jonas", "Mila", "Simon", "Sophie", "Ben", "Lea", "Noah", "Luba", "Marco"];
+let COMMENT_NAMES = ["Anna", "Jonas", "Mila", "Simon", "Sophie", "Ben", "Lea", "Noah", "Liuba", "Marco"];
 let liked = false;
 let likeCount = 1253;
 
 let books = [
-    { id: 1, title: "Der kleine Prinz", author: "Antoine de Saint-Exupéry", cover: img[1], price: "€9.99", genre: "Fiction", date: "1943-04-06", comments: ["Anna: Wunderschönes Buch!", "Jonas: Für alle Altersgruppen."] },
+    { id: 1, title: "Der kleine Prinz", author: "Antoine de Saint-Exupéry", cover: img[1], price: "€9.99", genre: "Fiction", date: "1943-04-06", comments: ["Anna: Wunderschönes Buch!", "Jonas: Für alle Altersgruppen.", "Liuba:Die Geschichte mit dem Fuchs ist sehr Dramatisch!"] },
     { id: 2, title: "Grimms Märchen", author: "Brüder Grimm", cover: img[2], price: "€12.50", genre: "Märchen", date: "1812-01-01", comments: ["Mila: Die Klassiker meiner Kindheit."] },
     { id: 3, title: "Sapiens", author: "Yuval Noah Harari", cover: img[3], price: "€18.00", genre: "History", date: "2011-02-04", comments: ["Paul: Brillant geschrieben.", "Sophie: Eröffnet neue Perspektiven."] },
     { id: 4, title: "Der Mantel", author: "Nikolai Gogol", cover: img[4], price: "€7.90", genre: "Kurzgeschichte", date: "1842-01-01", comments: ["Lea: Düster, aber faszinierend."] },

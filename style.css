@@ -1,6 +1,12 @@
 body {
-    margin: 4px;
+    margin: 0px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+
+    font-style: normal;
 }
+
+
 
 .header {
     width: auto;
@@ -24,12 +30,15 @@ body {
 }
 
 .logo {
-    width: 60px;
-    height: 60px;
-    background-image: url('img/11905970_4851717.jpg');
+    width: 140px;
+    height: 140px;
+    background-image: url(./img/Buchladen\ Logo\ im\ minimalistischen\ Stil.png);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: beige;
 }
 
 .logo-text {
@@ -66,7 +75,6 @@ p {
 
 
 .intro.container {
-    ;
     width: auto;
     padding: 28px 20px;
     max-width: 900px;
@@ -265,6 +273,8 @@ p {
 }
 
 @media (max-width:420px) {
+
+
     .gallery {
         grid-template-columns: 1fr;
     }
