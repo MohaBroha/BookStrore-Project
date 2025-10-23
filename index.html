@@ -8,56 +8,54 @@
     <link rel="shortcut icon" href="img/books.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
-
 </head>
 
 <body>
 
-    <header class="header">
+    <header class="header" aria-label="Kopfbereich der Seite">
         <div class="container">
             <div class="logo" aria-hidden="true"></div>
-            <div class="logo-text">Bookstore</div>
+            <div class="logo-text" aria-label="Bookstore Startseite">Bookstore</div>
         </div>
     </header>
 
-    <main class="myMain">
-        <section class="intro container">
+    <main class="myMain" aria-label="Hauptinhalt">
+        <section class="intro container" aria-label="Einleitung">
             <h1>Welcome to the Bookstore</h1>
             <h2>A place where stories come alive.</h2>
             <p>Browse through our virtual shelves, discover new titles, share your thoughts, and bring your favorites
                 home.</p>
         </section>
 
-        <section class="gallery-wrap">
-            <div id="gallery" class="gallery container"></div>
+        <section class="gallery-wrap" aria-label="Buchgalerie">
+            <div id="gallery" class="gallery container" aria-label="Liste der Bücher"></div>
         </section>
     </main>
 
-    <div id="modalBackdrop" class="viewer-overlay" style="display:none;" onclick="closeModal(event)">
+    <div id="modalBackdrop" class="viewer-overlay" , onclick="closeModal(event)" aria-label="Buchdetails-Ansicht"
+        role="dialog">
         <div class="viewer">
-            <div class="cover" id="modalCover"></div>
-            <div class="meta">
-                <h3 id="modalTitle"></h3>
-                <div id="modalAuthor" class="small"></div>
-                <div id="modalPrice"></div>
-                <div id="like-container">
-                    <span id="like-heart">🖤</span>
-                    <span id="like-count">1253</span>
+            <div class="cover" id="modalCover" aria-label="Buchcover"></div>
+            <div class="meta" aria-label="Buchinformationen">
+                <h3 id="modalTitle" aria-label="Buchtitel"></h3>
+                <div id="modalAuthor" class="small" aria-label="Autor"></div>
+                <div id="modalPrice" aria-label="Preis"></div>
+                <div id="like-container" aria-label="Gefällt-mir-Bereich">
+                    <span id="like-heart" aria-label="Gefällt mir Symbol">🖤</span>
+                    <span id="like-count" aria-label="Anzahl der Likes">1253</span>
                 </div>
-                <div id="modalGenre"></div>
-                <div id="modalDate" class="small"></div>
-                <div class="comments" id="comments"></div>
-                <input type="text" id="newComment" placeholder="Add comment">
-                <button onclick="addComment()" class="btn">Add Comment</button>
-
+                <div id="modalGenre" aria-label="Genre"></div>
+                <div id="modalDate" class="small" aria-label="Veröffentlichungsdatum"></div>
+                <div class="comments" id="comments" aria-label="Kommentare"></div>
+                <input type="text" id="newComment" placeholder="Kommentar hinzufügen"
+                    aria-label="Neuen Kommentar eingeben">
+                <button onclick="addComment()" class="btn" aria-label="Kommentar hinzufügen">Add Comment</button>
             </div>
         </div>
     </div>
 
-    <footer class="footer">
-
+    <footer class="footer" aria-label="Fußbereich der Seite">
         <div class="footer-text">© 2025 Bookstore. All rights reserved.</div>
-
     </footer>
 
 </body>
