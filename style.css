@@ -87,14 +87,16 @@ p {
 .gallery-wrap {
     width: 100%;
     background: #350758;
-    padding: 30px 0 60px;
+    padding: 30px 0 30px;
+
 }
 
 .gallery {
-
+    background-image: 50px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 18px;
+
 }
 
 .book-card {
@@ -111,18 +113,14 @@ p {
     outline: none;
 }
 
-.book-card:hover {
-    transform: translateY(-5px) scale(1.03);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
+
 
 .book-thumb {
-
     width: 100%;
-    padding-top: 150%;
-    background-size: auto;
+    aspect-ratio: 2/3;
+    background-size: contain;
     background-position: center;
-
+    background-repeat: no-repeat;
 }
 
 
@@ -184,10 +182,12 @@ p {
     align-items: center;
     z-index: 9999;
     display: none;
+
+
 }
 
 .viewer {
-    width: 90%;
+    width: 50%;
     max-width: 900px;
     background: beige;
     border-radius: 10px;
@@ -196,6 +196,8 @@ p {
     grid-template-columns: 1fr 360px;
     gap: 18px;
     padding: 18px;
+    position: relative;
+
 }
 
 .viewer .cover {
@@ -225,7 +227,17 @@ p {
     margin-top: 8px;
     padding-top: 8px;
     border-top: 1px dashed navy;
-    overflow: auto;
+    overflow-y: auto;
+
+    max-height: 200px;
+
+}
+
+#newComment {
+
+    padding: 10px;
+
+
 }
 
 
@@ -238,6 +250,27 @@ p {
     background: #052f56;
     color: white;
     margin-top: 6px;
+}
+
+.viewer .close-btn {
+    position: absolute;
+
+    top: 10px;
+    right: 10px;
+    background: #052f56;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 100;
+
+}
+
+.viewer .close-btn:hover {
+    background: red;
 }
 
 
@@ -264,15 +297,25 @@ p {
     }
 
     .viewer {
+        width: 90%;
+
+        max-width: none;
+
         grid-template-columns: 1fr;
+
         padding: 12px;
+        max-height: 90vh;
+
+        overflow-y: auto;
+
     }
 
     .viewer .cover {
-        min-height: 300px;
-    }
+        min-height: 200px;
 
+    }
 }
+
 
 @media (max-width:420px) {
 
@@ -292,5 +335,14 @@ p {
 
     .footer-text {
         font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .viewer {
+        max-height: 90vh;
+
+        overflow-y: auto;
+
     }
 }

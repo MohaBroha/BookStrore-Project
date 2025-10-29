@@ -32,18 +32,17 @@
         </section>
     </main>
 
-    <div id="modalBackdrop" class="viewer-overlay" , onclick="closeModal(event)" aria-label="Buchdetails-Ansicht"
+    <div id="modalBackdrop" class="viewer-overlay" onclick="closeModal(event)" aria-label="Buchdetails-Ansicht"
         role="dialog">
         <div class="viewer">
+
+            <button class="close-btn" onclick="closeModal()" aria-label="Modal schließen">✖</button>
+
             <div class="cover" id="modalCover" aria-label="Buchcover"></div>
             <div class="meta" aria-label="Buchinformationen">
                 <h3 id="modalTitle" aria-label="Buchtitel"></h3>
                 <div id="modalAuthor" class="small" aria-label="Autor"></div>
                 <div id="modalPrice" aria-label="Preis"></div>
-                <div id="like-container" aria-label="Gefällt-mir-Bereich">
-                    <span id="like-heart" aria-label="Gefällt mir Symbol">🖤</span>
-                    <span id="like-count" aria-label="Anzahl der Likes">1253</span>
-                </div>
                 <div id="modalGenre" aria-label="Genre"></div>
                 <div id="modalDate" class="small" aria-label="Veröffentlichungsdatum"></div>
                 <div class="comments" id="comments" aria-label="Kommentare"></div>
