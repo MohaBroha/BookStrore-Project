@@ -82,6 +82,6 @@ This project was created to practice:
 
 ## 👨‍💻 Author
 
-Developed by **Simon Bonardi**
+Developed by **Moha Broha**
 
 GitHub: https://github.com/MohaBroha
